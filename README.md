@@ -78,8 +78,8 @@ Guidelines
 
 Created Abstract `Runner` class for calculator running.
 Two chield classes(ConsoleRunner and FileRunner) could be used to specify User Input.
-It makes sence to do the same trick with Logger(f.e. for File Output or WebSocket) and use
-Strategy pattern. But for now it's enaugh to use simple ConsoleLogger.
+Used Singleton pattern for logger. In a case of using another logger(f.e. File or Stream) we could use
+Strategy pattern and pass it as argument to runner. But for now it's enaugh to use simple ConsoleLogger.
 
 Class `RPNCalculator` is the engine of app.
 It store arguments and could execute calculation if has all needed data(at least two numbers and operator).
